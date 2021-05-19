@@ -1,0 +1,16 @@
+# Installation of ProfileReport Library from Git
+!pip install https://github.com/pandas-profiling/pandas-profiling/archive/master.zip
+
+#Package Import
+from pandas_profiling import ProfileReport
+
+df_excel = pd.read_csv('Downloads/ExcelFile.csv')
+
+
+# GENERATION OF PANDAS PROFILE REPORT FOR EXPLORATORY DATA ANALYSIS
+
+# !jupyter notebook --NotebookApp.iopub_data_rate_limit=1.0e10
+profile = ProfileReport(df_excel, title='Pandas Profiling Report', explorative=True)
+
+#Exporting the Profiling Report to a HTML file
+profile.to_file("Profile_Report.html")
