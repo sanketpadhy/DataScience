@@ -18,7 +18,7 @@ r = sr.Recognizer()
 mic_list = sr.Microphone.list_microphone_names()
  
 # =============================================================================
-# #This part of program should be used if external audio device is beinf used
+# #This part of program should be used if external audio device is being used
 # #the following loop aims to set the device ID of the mic that
 # #we specifically want to use to avoid ambiguity.
 # for i, microphone_name in enumerate(mic_list):
